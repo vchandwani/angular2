@@ -1,0 +1,23 @@
+<div class="backdrop" [ngStyle]="{'display': display}"></div>
+<div class="modal" tabindex="-1" role="dialog" [ngStyle]="{'display': display}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button *ngIf="status != 401"  type="button" class="close" aria-label="Close" (click)="onErrorHandled()"><span aria-hidden="true">&times;</span></button>
+                <button *ngIf="status == 401"  type="button" class="close" aria-label="Close" (click)="signIn()"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">
+                    <i class="material-icons green" [ngStyle]="{'display': displaySuccess}">add_alert</i>
+                    <i class="material-icons red" [ngStyle]="{'display': displayError}">warning</i>
+                    {{ error?.title }}
+                </h4>
+            </div>
+            <div class="modal-body" *ngIf="error?.message">
+                <p>{{ error?.message }}</p>
+            </div>
+            <div class="modal-footer">
+                <button *ngIf="status != 401" type="button" class="btn btn-default" (click)="onErrorHandled()">Close</button>
+                <button *ngIf="status == 401" type="button" class="btn btn-default" (click)="signIn()">Close</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
