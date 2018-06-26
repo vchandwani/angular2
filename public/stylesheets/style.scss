@@ -140,6 +140,9 @@ footer .glyphicon {
     -webkit-animation-duration: 1s;
     visibility: visible;
 }
+.modal {
+    top : 25px;
+}
 @keyframes slide {
   0% {
     opacity: 0;

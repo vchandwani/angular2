@@ -21,11 +21,15 @@ import { Ng4LoadingSpinnerModule } from 'ng4-loading-spinner';
 import { ChartsModule } from 'ng2-charts';
 import { MessagesComponent } from "./messages/messages.component";
 import { MessageListComponent } from "./messages/message-list.component";
-import { ContentComponent } from "./content/content.component";
 import { MessageComponent } from "./messages/message.component";
 import { MessageInputComponent } from "./messages/message-input.component";
-import { ContentService } from "./content/content.service";
 import { MessageService } from "./messages/message.service";
+import { ContentsComponent } from "./contents/contents.component";
+import { ContentListComponent } from "./contents/content-list.component";
+import { ContentComponent } from "./contents/content.component";
+import { ContentInfoComponent } from "./contents/contentInfo.component";
+import { ContentInputComponent } from "./contents/content-input.component";
+import { ContentService } from "./contents/content.service";
 
 
 @NgModule({   
@@ -36,9 +40,13 @@ import { MessageService } from "./messages/message.service";
         ErrorComponent,
         MessagesComponent,
         MessageListComponent,
-        ContentComponent,
         MessageComponent,
-        MessageInputComponent
+        MessageInputComponent,
+        ContentsComponent,
+        ContentListComponent,
+        ContentComponent,
+        ContentInfoComponent,
+        ContentInputComponent
     ], 
     imports: [
         CommonModule,

@@ -5,7 +5,6 @@ var mongoose = require('mongoose');
 
 var User = require('../models/user');
 var Message = require('../models/message');
-var Content = require('../models/content');
 
 
 router.use('/', function (req, res, next) {
@@ -23,7 +22,6 @@ router.use('/', function (req, res, next) {
 router.get('/', function (req, res, next) {
     var decoded = jwt.decode(req.query.token);
     Message.find()
-        .populate('user', 'firstName')
         .exec(function (err, messages) {
             if (err) {
                 return res.status(500).json({

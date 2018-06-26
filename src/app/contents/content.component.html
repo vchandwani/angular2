@@ -1,0 +1,14 @@
+<article class="panel panel-default">
+    <div class="panel-body">
+        {{ content.content }}
+    </div>
+    <footer class="panel-footer">
+        <div class="author">
+            {{ content.location }}
+        </div>
+        <div class="config">
+            <a (click)="onEdit()">Edit</a>
+            <a (click)="onDelete()">Delete</a>
+        </div>
+    </footer>
+</article>
